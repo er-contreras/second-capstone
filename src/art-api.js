@@ -5,9 +5,9 @@ const apiContent = async () => {
   const response = await fetch(url);
   const apiScores = await response.json();
   const almost = apiScores.data;
-  console.log(response, apiScores,almost)
+  // console.log(response, apiScores, almost);
 
-  document.body.innerHTML = almost[1].image_id
+  document.body.innerHTML = almost[1].image_id;
   // almost.sort((a, b) => b.score - a.score);
 
   // const refresh = document.getElementById('refresh');

@@ -1,3 +1,3 @@
-import apiContent from "./art-api";
+import apiContent from './art-api.js';
 
-apiContent()
+apiContent();
