@@ -1,13 +1,13 @@
 const apiContent = async () => {
   // const url = 'https://api.artic.edu/api/v1/artworks/';
-  const url = 'https://api.artic.edu/api/v1/artworks/75644?fields=id,title,image_id,alt_image_ids';
+  // const url = 'https://api.artic.edu/api/v1/artworks/75644?fields=id,title,image_id,alt_image_ids';
 
-  const response = await fetch(url);
-  const apiScores = await response.json();
-  const almost = apiScores.data;
+  // const response = await fetch(url);
+  // const apiScores = await response.json();
+  // const almost = apiScores.data;
   // console.log(response, apiScores, almost);
 
-  document.body.innerHTML = almost[1].image_id;
+  // document.body.innerHTML = almost[1];
   // almost.sort((a, b) => b.score - a.score);
 
   // const refresh = document.getElementById('refresh');
