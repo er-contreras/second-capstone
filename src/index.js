@@ -1,3 +1,7 @@
-import apiContent from './art-api.js';
+import './style.css';
+import '@fortawesome/fontawesome-free/js/all.js';
+import displayItems from './homePage.js';
 
-apiContent();
+window.addEventListener('load', () => {
+  displayItems();
+});

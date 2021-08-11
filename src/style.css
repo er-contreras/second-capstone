@@ -3,3 +3,11 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+.meal-card {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  height: 50%;
+  border: solid 1px black;
+}
