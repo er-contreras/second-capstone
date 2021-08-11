@@ -33,3 +33,12 @@ const postLike = async (id) => {
       const status = await response.text();
       return status;
 };
+
+const getLikes = async () => {
+    const response = await fetch(urlLikes)
+    const data = await response.json();
+    const result = await data.likes;
+    return result;
+};
+
+export { getMeals, postLike, getLikes };
