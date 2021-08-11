@@ -28,3 +28,20 @@ const addItem = (strCategory,strCategoryThumb,idCategory) => {
     divItem.appendChild(commentBtn);
     container.appendChild(divItem);
 };
+
+const displayItems = async () => {
+  const categories = await getMeals();
+  let list = []
+  if(categories.length > 6){
+      for(let i = 0; i < 6; i++){
+          list.push(categories[i]);
+      }
+  }
+  list.forEach(element => {
+      addItem(element.strCategory,element.strCategoryThumb,element.idCategory)
+  }); 
+}
+
+
+
+export default displayItems;
