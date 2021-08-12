@@ -26,7 +26,7 @@ const getMeals = async () => {
 
 const getData = () => {
   getMeals().then((result) => {
-    result.splice(7);
+    result.splice(6);
     setLocalStorage(result);
     displayItems(result);
     getListLikes();
