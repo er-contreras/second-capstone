@@ -1,4 +1,4 @@
-import { getMeals } from './homePageRequest';
+import { displayLikes, getMeals } from './homePageRequest';
 
 const container = document.getElementById('container');
 const addItem = (meal, index) => {
@@ -33,17 +33,11 @@ const addItem = (meal, index) => {
   container.appendChild(divItem);
 };
 
-const displayItems = async () => {
-  const categories = await getMeals();
-  const list = [];
-  if (categories.length > 6) {
-    for (let i = 0; i < 6; i += 1) {
-      list.push(categories[i]);
-    }
-  }
-  list.forEach((element) => {
-    addItem(element.strCategory, element.strCategoryThumb, element.idCategory);
+const displayItems = async (result) => {
+  result.forEach((element,index) => {
+    addItem(element,index);
   });
 };
+
 
 export default displayItems;
