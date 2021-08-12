@@ -12,3 +12,9 @@ const postLike = async (id) => {
     const status = await response;
     return status;
   };
+
+  const getLikes = async () => {
+    const response = await fetch(urlLikes);
+    const data = await response.json();
+    return data;
+  };
