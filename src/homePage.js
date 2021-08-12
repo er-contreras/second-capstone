@@ -12,7 +12,6 @@ const addItem = (meal, index) => {
   icon.classList.add('far', 'fa-heart', 'heart');
   title.textContent = `${meal.strCategory}`;
   icon.dataset.id = `${index}`;
-  likeDiv.appendChild(icon);
   likeDiv.textContent = 'Likes';
   likeDiv.appendChild(icon);
   likeCount.classList.add('likes');
@@ -23,9 +22,9 @@ const addItem = (meal, index) => {
   commentBtn.innerHTML = 'comment';
   commentBtn.dataset.id = `${index}`;
   divItem.classList.add('meal-card');
+  divItem.appendChild(imgDiv);
   divItem.appendChild(title);
   divItem.appendChild(likeDiv);
-  divItem.appendChild(imgDiv);
   divItem.appendChild(likeCount);
   divItem.appendChild(commentBtn);
   container.appendChild(divItem);
