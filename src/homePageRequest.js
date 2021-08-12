@@ -1,8 +1,7 @@
-import { setLocalStorage } from "./localStorage";
+import { setLocalStorage } from './localStorage';
 import displayItems from './homePage';
-import { getListLikes } from "./like";
+import { getListLikes } from './like';
 
-const urlLikes = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/sqPJ7A1vxlpEoYTVLiXr/likes';
 const getMeals = async () => {
   const response = await fetch('https://www.themealdb.com/api/json/v1/1/categories.php');
   const data = await response.json();
@@ -10,21 +9,19 @@ const getMeals = async () => {
   return result;
 };
 
-//sqPJ7A1vxlpEoYTVLiXr
-const newGame = async () => {
-  const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/',
-    {
-      method: 'POST',
-      body: JSON.stringify({ name: 'Meals' }),
-      headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-      },
-    });
-  const status = await response.text();
-  return status;
-};
-
-
+// sqPJ7A1vxlpEoYTVLiXr
+// const newGame = async () => {
+//   const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/',
+//     {
+//       method: 'POST',
+//       body: JSON.stringify({ name: 'Meals' }),
+//       headers: {
+//         'Content-type': 'application/json; charset=UTF-8',
+//       },
+//     });
+//   const status = await response.text();
+//   return status;
+// };
 
 const getData = () => {
   getMeals().then((result) => {
@@ -34,4 +31,4 @@ const getData = () => {
     getListLikes();
   });
 };
-export { getMeals, urlLikes, getData };
+export { getMeals, getData };

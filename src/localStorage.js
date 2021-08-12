@@ -1,4 +1,3 @@
-
 const getLocalStorage = () => JSON.parse(localStorage.getItem('APIData'));
 
 const setLocalStorage = (data) => {

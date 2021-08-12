@@ -9,7 +9,6 @@ window.addEventListener('load', () => {
   getData();
 });
 
-container.addEventListener('click', (e) =>{
+container.addEventListener('click', (e) => {
   addLikes(e);
-})
-
+});

@@ -1,5 +1,3 @@
-import { displayLikes, getMeals } from './homePageRequest';
-
 const container = document.getElementById('container');
 const addItem = (meal, index) => {
   const divItem = document.createElement('div');
@@ -9,9 +7,9 @@ const addItem = (meal, index) => {
   const imgItem = document.createElement('img');
   const likeCount = document.createElement('p');
   const commentBtn = document.createElement('button');
-  commentBtn.classList.add('buttons')
+  commentBtn.classList.add('buttons');
   const icon = document.createElement('i');
-  icon.classList.add("far", "fa-heart",'heart');
+  icon.classList.add('far', 'fa-heart', 'heart');
   title.textContent = `${meal.strCategory}`;
   icon.dataset.id = `${index}`;
   likeDiv.appendChild(icon);
@@ -34,10 +32,9 @@ const addItem = (meal, index) => {
 };
 
 const displayItems = async (result) => {
-  result.forEach((element,index) => {
-    addItem(element,index);
+  result.forEach((element, index) => {
+    addItem(element, index);
   });
 };
-
 
 export default displayItems;
