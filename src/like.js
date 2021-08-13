@@ -10,6 +10,7 @@ const postLike = async (id) => {
     }),
   });
   const status = await response;
+  console.log(status)
   return status;
 };
 
