@@ -1,25 +1,25 @@
-import { getCounter } from "./counterComments";
+import { getCounter } from './counterComments.js';
 
 const apiContent = async (id) => {
   const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/sqPJ7A1vxlpEoYTVLiXr/comments?item_id=${id}`;
 
   const commentsContainer = document.getElementById('commentsContainer');
-  commentsContainer.innerHTML = `<h2>Comments</h2>`;
+  commentsContainer.innerHTML = '<h2>Comments</h2>';
   const response = await fetch(url);
   const apiScores = await response.json();
   const almost = apiScores;
 
-  almost.map((obj) => {
+  almost.map((obj) => { /* eslint-disable-line */
     const paragraph = document.createElement('p');
-    const { username, comment, creation_date } = obj;
+    const { username, comment, creation_date } = obj; /* eslint-disable-line */
 
-    paragraph.textContent = `${creation_date} ${username}: ${comment}`;
+    paragraph.textContent = `${creation_date} ${username}: ${comment}`; /* eslint-disable-line */
 
     commentsContainer.appendChild(paragraph);
   });
 
   getCounter();
-}
+};
 
 const addComments = async (id) => {
   const name = document.getElementById('name').value;
@@ -41,12 +41,11 @@ const addComments = async (id) => {
     },
   });
 
-  const response = await getComments.text();
-  apiContent(id)
-  
+  const response = await getComments.text(); /* eslint-disable-line */
+  apiContent(id);
+
   const form = document.getElementById('form');
   form.reset();
-  
 };
 
-export {addComments, apiContent};
+export { addComments, apiContent };
