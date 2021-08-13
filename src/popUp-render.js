@@ -28,16 +28,16 @@ const popUpRender = (image, name) => {
   title.textContent = name;
 
   const itemDescription1 = document.createElement('p');
-  const local = JSON.parse(localStorage.getItem('description'))
+  const local = JSON.parse(localStorage.getItem('description'));
   const buttons = document.getElementsByClassName('buttons');
 
-    for (let i = 0; i < local.length; i += 1) {
-      // console.log(buttons[i])
-      if (buttons[i] === buttons[i]) {
-        // console.log(local[i].strCategoryDescription)
-        itemDescription1.textContent = `${local[i].strCategoryDescription}`;
-      }
+  for (let i = 0; i < local.length; i += 1) {
+    // console.log(buttons[i])
+    if (buttons[i] === true) {
+      // console.log(local[i].strCategoryDescription)
+      itemDescription1.textContent = `${local[i].strCategoryDescription}`;
     }
+  }
 
   // itemDescription1.textContent = `${obj.strCategoryDescription}`;
   // const itemDescription2 = document.createElement('p');
@@ -51,9 +51,9 @@ const popUpRender = (image, name) => {
   const commentsContainer = document.createElement('div');
   commentsContainer.id = 'commentsContainer';
   const commentsTitle = document.createElement('h2');
-  commentsTitle.textContent = 'Comments'
+  commentsTitle.textContent = 'Comments';
   const comments = document.createElement('p');
-  comments.textContent = '03/11/2021 Alex: I\nd love to buy it!'
+  comments.textContent = '03/11/2021 Alex: I\nd love to buy it!';
 
   // ---------------Add Comments ---------------------------------------->
   const form = document.createElement('form');
@@ -93,7 +93,7 @@ const popUpRender = (image, name) => {
   document.body.appendChild(popUpContainer);
   // Append to popUpContainer
   popUpContainer.appendChild(imgNCloseContainer);
-  popUpContainer.appendChild(itemNDescripContainer)
+  popUpContainer.appendChild(itemNDescripContainer);
   popUpContainer.appendChild(itemDescriptionContainer);
 
   // Append to imgNCloseContainer
@@ -122,7 +122,6 @@ const popUpRender = (image, name) => {
   form.appendChild(textarea);
   form.appendChild(containerSubmitBtn);
   containerSubmitBtn.appendChild(submitBtn);
-
-}
+};
 
 export default popUpRender;

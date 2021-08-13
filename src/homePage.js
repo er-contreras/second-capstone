@@ -1,4 +1,4 @@
-import { getMeals } from './homePageRequest';
+import { getMeals } from './homePageRequest.js';
 
 const container = document.getElementById('container');
 const addItem = (strCategory, strCategoryThumb, idCategory) => {

@@ -1,5 +1,4 @@
-import { getMeals } from "./homePageRequest.js";
-import popUpRender from "./popUp-render.js";
+import { getMeals } from './homePageRequest.js';
 
 // Grabbing API Description
 const mealCardDescription = async () => {
@@ -11,12 +10,11 @@ const mealCardDescription = async () => {
     }
   }
 
-  return list
+  return list;
 
   // list.forEach((element) => {
   //   console.log(element)
   // });
-}
-
+};
 
 export default mealCardDescription;

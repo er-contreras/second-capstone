@@ -1,5 +1,4 @@
-import mealCardDescription from "./mealCardDescr";
-import popUpRender from "./popUp-render";
+import popUpRender from './popUp-render.js';
 
 const openPopUp = () => {
   // Grab the images and name from the DOM
@@ -20,7 +19,7 @@ const openPopUp = () => {
         const image = mealCardBtn[i].lastChild.previousSibling.firstChild.src;
         const name = mealCardBtn[i].firstChild.textContent;
 
-        popUpRender(image, name)
+        popUpRender(image, name);
 
         const getMeals = async () => {
           const response = await fetch('https://www.themealdb.com/api/json/v1/1/categories.php');
@@ -29,25 +28,22 @@ const openPopUp = () => {
           const items = result;
           const slice = items.slice(0, 6);
 
-          localStorage.setItem('description', JSON.stringify(slice))
+          localStorage.setItem('description', JSON.stringify(slice));
         };
 
-        getMeals()
+        getMeals();
 
         const ex = document.querySelector('.btn');
         const popUpContainer = document.getElementById('popUpContainer');
-    
-        
+
         ex.addEventListener('click', () => {
           container.style.display = 'inherit';
           header.style.display = 'inherit';
-          popUpContainer.style.display = 'none'
-        })
+          popUpContainer.style.display = 'none';
+        });
       }
     }
-
-
   });
-}
+};
 
 export default openPopUp;

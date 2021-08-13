@@ -14,7 +14,6 @@ body {
 
 header {
   display: block;
-  color: orange;
 }
 
 #container {
@@ -24,7 +23,6 @@ header {
 #popUpContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   position: fixed;
   top: 50%;
@@ -40,16 +38,30 @@ header {
 #form {
   display: flex;
   flex-direction: column;
+  margin: 25px 0;
+}
+
+#form h2 {
+  margin: 10px 0;
+  text-align: center;
+}
+
+#form label {
+  margin: 10px 0;
+}
+
+#submit-ntainer {
+  margin: 10px 0;
 }
 
 #imgNClose {
   display: flex;
   justify-content: center;
-  max-width: 80%;
+  min-width: 80%;
 }
 
 #imgNClose img {
-  max-width: 90%;
+  min-width: 90%;
 }
 
 .btn {
@@ -61,10 +73,15 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 120%;
+  min-width: 80%;
+  margin: 10px 0;
 }
 
 #itemDescriptionContainer p {
-  font-size: 10px;
-  width: 200px;
+  font-size: 12px;
+  width: 80%;
+}
+
+#commentsContainer h2 {
+  text-align: center;
 }
