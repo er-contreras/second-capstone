@@ -1,7 +1,6 @@
 import './style.css';
 import './popUp.css';
 import '@fortawesome/fontawesome-free/js/all.js';
-import displayItems from './homePage.js';
 import openPopUp from './open-popUp.js';
 import { getData } from './homePageRequest.js';
 import { addLikes, getLikes } from './like.js';
@@ -16,5 +15,3 @@ window.addEventListener('load', () => {
 container.addEventListener('click', (e) => {
   addLikes(e);
 });
-
-console.log(getLikes());

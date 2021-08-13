@@ -1,7 +1,7 @@
 import { setLocalStorage } from './localStorage';
 import displayItems from './homePage';
 import { getListLikes } from './like';
-import displayCounter from './itemsCounter';
+import { displayCount }from './itemsCounter';
 
 const getMeals = async () => {
   const response = await fetch('https://www.themealdb.com/api/json/v1/1/categories.php');
@@ -33,7 +33,7 @@ const getData = () => {
     setLocalStorage(arr);
     displayItems(arr);
     getListLikes();
-    displayCounter();
+    displayCount();
   });
 };
 export { getMeals, getData };

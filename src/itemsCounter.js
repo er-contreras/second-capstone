@@ -1,11 +1,12 @@
 const itemCounter = () => {
-  const items = [...document.querySelector('#container').children];
-  return items.length;
+  const items = document.querySelectorAll('.meal-card').length;
+  return items;
 };
 
-const displayCounter = () => {
+const displayCount = () => {
   const counter = document.getElementById('items-counter');
   counter.innerHTML = `<b>(${itemCounter()})<b>`;
 };
 
-export default displayCounter;
+
+export { displayCount, itemCounter };
