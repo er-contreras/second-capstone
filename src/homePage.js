@@ -11,11 +11,12 @@ const addItem = (meal, index) => {
   const icon = document.createElement('i');
   icon.classList.add('far', 'fa-heart', 'heart');
   title.textContent = `${meal.strCategory}`;
-  icon.dataset.id = `${index}`;
+  icon.setAttribute('id', index);
   likeDiv.textContent = 'Likes';
   likeDiv.appendChild(icon);
   likeCount.classList.add('likes');
-  likeCount.dataset.id = `${index}`;
+  //likeCount.dataset.id = `${index}`;
+  likeCount.setAttribute('id', index)
   likeCount.textContent = 0;
   imgItem.setAttribute('src', `${meal.strCategoryThumb}`);
   imgItem.classList.add('images');

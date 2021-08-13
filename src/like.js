@@ -20,23 +20,31 @@ const getLikes = async () => {
 };
 
 const displayLikes = (data) => {
-  const likeCounts = [...document.querySelectorAll('.likes')];
+  const likeCounts = document.querySelectorAll('.likes');
   data.forEach((object) => {
     const id = parseInt(object.item_id, 10);
     likeCounts[id].textContent = object.likes;
-  });
+   });
 };
 
 const getListLikes = () => {
   getLikes().then((result) => {
-    displayLikes(result);
+    result.sort((a,b) =>{
+      return a.item_id -b.item_id
+    })
+    let arr = [];
+    for(let i = 0; i < 6; i+=1){
+       arr.push(result[i]);
+    }
+    displayLikes(arr);
   });
 };
 
 const addLikes = (event) => {
   const isLikeIcon = event.target.classList.contains('heart');
   if (isLikeIcon) {
-    const { id } = event.target.dataset;
+    const id = event.target.id;
+    console.log(id);
     postLike(id).then((result) => {
       getListLikes();
       return result;
@@ -44,4 +52,4 @@ const addLikes = (event) => {
   }
 };
 
-export { addLikes, displayLikes, getListLikes };
+export { addLikes, displayLikes, getListLikes, getLikes };
