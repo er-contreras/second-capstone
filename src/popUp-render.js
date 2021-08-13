@@ -1,4 +1,4 @@
-const popUpRender = (image, name) => {
+const popUpRender = (image, name, id) => {
   // pop up window container
   const popUpContainer = document.createElement('div');
   popUpContainer.id = 'popUpContainer';
@@ -24,28 +24,14 @@ const popUpRender = (image, name) => {
   const titleContainer = document.createElement('div');
   titleContainer.id = 'titleContainer';
   const title = document.createElement('h2');
-  title.id = 'title';
+  title.id = 'titleImg';
   title.textContent = name;
 
+  // Description ------------------------------------------------->
   const itemDescription1 = document.createElement('p');
   const local = JSON.parse(localStorage.getItem('description'));
-  const buttons = document.getElementsByClassName('buttons');
 
-  for (let i = 0; i < local.length; i += 1) {
-    // console.log(buttons[i])
-    if (buttons[i] === true) {
-      // console.log(local[i].strCategoryDescription)
-      itemDescription1.textContent = `${local[i].strCategoryDescription}`;
-    }
-  }
-
-  // itemDescription1.textContent = `${obj.strCategoryDescription}`;
-  // const itemDescription2 = document.createElement('p');
-  // itemDescription2.textContent = 'Length: 100,000';
-  // const itemDescription3 = document.createElement('p');
-  // itemDescription3.textContent = 'Weight: 400';
-  // const itemDescription4 = document.createElement('p');
-  // itemDescription4.textContent = 'Power: 100,000,000';
+  itemDescription1.textContent = `${local[id].strCategoryDescription}`;
 
   // --------------- Comments ---------------------------------------->
   const commentsContainer = document.createElement('div');
@@ -53,7 +39,7 @@ const popUpRender = (image, name) => {
   const commentsTitle = document.createElement('h2');
   commentsTitle.textContent = 'Comments';
   const comments = document.createElement('p');
-  comments.textContent = '03/11/2021 Alex: I\nd love to buy it!';
+  // comments.textContent = '03/11/2021 Alex: I\nd love to buy it!';
 
   // ---------------Add Comments ---------------------------------------->
   const form = document.createElement('form');
@@ -86,6 +72,7 @@ const popUpRender = (image, name) => {
   containerSubmitBtn.id = 'submit-container';
 
   const submitBtn = document.createElement('input');
+  submitBtn.dataset.id = id;
   submitBtn.setAttribute('type', 'submit');
   submitBtn.id = 'submit';
 

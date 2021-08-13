@@ -15,8 +15,8 @@ const addItem = (meal, index) => {
   likeDiv.textContent = 'Likes';
   likeDiv.appendChild(icon);
   likeCount.classList.add('likes');
-  //likeCount.dataset.id = `${index}`;
-  likeCount.setAttribute('id', index)
+  // likeCount.dataset.id = `${index}`;
+  likeCount.setAttribute('id', index);
   likeCount.textContent = 0;
   imgItem.setAttribute('src', `${meal.strCategoryThumb}`);
   imgItem.classList.add('images');

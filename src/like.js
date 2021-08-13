@@ -24,17 +24,15 @@ const displayLikes = (data) => {
   data.forEach((object) => {
     const id = parseInt(object.item_id, 10);
     likeCounts[id].textContent = object.likes;
-   });
+  });
 };
 
 const getListLikes = () => {
   getLikes().then((result) => {
-    result.sort((a,b) =>{
-      return a.item_id -b.item_id
-    })
-    let arr = [];
-    for(let i = 0; i < 6; i+=1){
-       arr.push(result[i]);
+    result.sort((a, b) => a.item_id - b.item_id);
+    const arr = [];
+    for (let i = 0; i < 6; i += 1) {
+      arr.push(result[i]);
     }
     displayLikes(arr);
   });
@@ -43,8 +41,7 @@ const getListLikes = () => {
 const addLikes = (event) => {
   const isLikeIcon = event.target.classList.contains('heart');
   if (isLikeIcon) {
-    const id = event.target.id;
-    console.log(id);
+    const { id } = event.target;
     postLike(id).then((result) => {
       getListLikes();
       return result;
@@ -52,4 +49,6 @@ const addLikes = (event) => {
   }
 };
 
-export { addLikes, displayLikes, getListLikes, getLikes };
+export {
+  addLikes, displayLikes, getListLikes, getLikes,
+};
