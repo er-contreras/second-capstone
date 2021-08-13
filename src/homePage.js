@@ -21,6 +21,7 @@ const addItem = (strCategory, strCategoryThumb, idCategory) => {
   imgItem.setAttribute('src', `${strCategoryThumb}`);
   imgDiv.appendChild(imgItem);
   commentBtn.innerText = 'comment';
+  commentBtn.classList.add('buttons');
   divItem.classList.add('meal-card');
   divItem.appendChild(title);
   divItem.appendChild(likeDiv);
