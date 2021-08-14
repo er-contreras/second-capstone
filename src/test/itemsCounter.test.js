@@ -3,8 +3,7 @@
  */
 
  import { expect, test } from '@jest/globals';
- import htmlTemplate from './htmlpage.js';
- import { itemCounter } from '../itemsCounter';
+ import { itemCounter } from '../mealsCounter';
  
  describe('Test ItemCounter', () => {
    document.body.innerHTML = `
