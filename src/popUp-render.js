@@ -85,7 +85,7 @@ const popUpRender = (image, name, id) => {
   commentsContainer.appendChild(commentsTitle);
   commentsContainer.appendChild(comments);
   popUpContainer.appendChild(form);
-  
+
   form.appendChild(formTitle);
   form.appendChild(labelName);
   form.appendChild(inputName);

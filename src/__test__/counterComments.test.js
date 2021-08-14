@@ -1,7 +1,6 @@
 import counterComments from '../counterComments.js';
 
 describe('Test counterComments function', () => {
-  
   document.body.innerHTML = `
    <div id="commentsContainer">
    <h2>Comments(6)</h2>
