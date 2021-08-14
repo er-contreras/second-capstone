@@ -49,5 +49,11 @@ header {
 }
 
 footer {
+  position: fixed;
   text-align: center;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border: 1px solid black;
+  padding: 3px 0;
 }

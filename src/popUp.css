@@ -12,14 +12,6 @@ body {
   font-size: 20px;
 }
 
-header {
-  display: block;
-}
-
-#container {
-  display: block;
-}
-
 #popUpContainer {
   display: flex;
   flex-direction: column;
@@ -29,8 +21,7 @@ header {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: hsl(0, 0%, 95%);
-  min-width: 95vw;
-  min-height: 90vh;
+  max-width: 95vw;
   border: 3px solid black;
   padding: 10px 0;
 }

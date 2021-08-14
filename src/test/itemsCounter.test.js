@@ -1,7 +1,3 @@
-/**
- * @jest-environment jsdom
- */
-
 import { expect, test } from '@jest/globals';
 import { itemCounter } from '../mealsCounter.js';
 

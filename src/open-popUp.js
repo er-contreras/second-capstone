@@ -2,7 +2,6 @@ import { addComments, apiContent } from './liveComments.js';
 import popUpRender from './popUp-render.js';
 
 const openPopUp = () => {
-  // Grab the images and name from the DOM
   const container = document.getElementById('container');
 
   container.addEventListener('click', (e) => {
@@ -35,19 +34,16 @@ const openPopUp = () => {
 
         getMeals();
 
-        // X btn
         const ex = document.querySelector('.btn');
         const popUpContainer = document.getElementById('popUpContainer');
 
         ex.addEventListener('click', () => {
-          container.style.display = 'inherit';
-          header.style.display = 'inherit';
+          container.style.display = 'grid';
+          header.style.display = 'flex';
           popUpContainer.remove();
         });
 
-        // ApiContent
         apiContent(e.target.dataset.id);
-        // Submit
         const submit = document.getElementById('submit');
 
         submit.addEventListener('click', (e) => {
