@@ -16,5 +16,3 @@ window.addEventListener('load', () => {
 container.addEventListener('click', (e) => {
   addLikes(e);
 });
-
-getLikes();

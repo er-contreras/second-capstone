@@ -1,3 +1,4 @@
+import { displayCount }from './mealsCounter';
 import { setLocalStorage } from './localStorage.js';
 import displayItems from './homePage.js';
 import { getListLikes } from './like.js';
@@ -10,20 +11,6 @@ const getMeals = async () => {
   return result;
 };
 
-// sqPJ7A1vxlpEoYTVLiXr
-// const newGame = async () => {
-//   const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/',
-//     {
-//       method: 'POST',
-//       body: JSON.stringify({ name: 'Meals' }),
-//       headers: {
-//         'Content-type': 'application/json; charset=UTF-8',
-//       },
-//     });
-//   const status = await response.text();
-//   return status;
-// };
-
 const getData = () => {
   getMeals().then((result) => {
     const arr = [];
@@ -33,7 +20,7 @@ const getData = () => {
     setLocalStorage(arr);
     displayItems(arr);
     getListLikes();
-    displayCounter();
+    displayCount();
   });
 };
 export { getMeals, getData };
