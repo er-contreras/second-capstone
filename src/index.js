@@ -9,6 +9,7 @@ const container = document.getElementById('container');
 
 window.addEventListener('load', () => {
   getData();
+
   openPopUp();
 });
 
