@@ -29,7 +29,7 @@ const popUpRender = (image, name, id) => {
 
   // Description ------------------------------------------------->
   const itemDescription1 = document.createElement('p');
-  const local = JSON.parse(localStorage.getItem('description'));
+  const local = JSON.parse(localStorage.getItem('APIData'));
 
   itemDescription1.textContent = `${local[id].strCategoryDescription}`;
 
