@@ -8,5 +8,4 @@ const displayCount = () => {
   counter.innerHTML = `<b>(${itemCounter()})<b>`;
 };
 
-
 export { displayCount, itemCounter };

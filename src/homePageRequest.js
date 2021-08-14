@@ -1,4 +1,4 @@
-import { displayCount }from './mealsCounter';
+import { displayCount } from './mealsCounter.js';
 import { setLocalStorage } from './localStorage.js';
 import displayItems from './homePage.js';
 import { getListLikes } from './like.js';

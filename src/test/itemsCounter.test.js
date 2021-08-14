@@ -2,11 +2,11 @@
  * @jest-environment jsdom
  */
 
- import { expect, test } from '@jest/globals';
- import { itemCounter } from '../mealsCounter';
- 
- describe('Test ItemCounter', () => {
-   document.body.innerHTML = `
+import { expect, test } from '@jest/globals';
+import { itemCounter } from '../mealsCounter.js';
+
+describe('Test ItemCounter', () => {
+  document.body.innerHTML = `
    '<div class="container">
       <div class="meal-card">
        div class="image">
@@ -21,9 +21,7 @@
       </div>
       </div>
     `;
-   test('itemCounter should return 1', () => {
-     expect(itemCounter()).toBe(1);
-   });
- });
-
- 
+  test('itemCounter should return 1', () => {
+    expect(itemCounter()).toBe(1);
+  });
+});
