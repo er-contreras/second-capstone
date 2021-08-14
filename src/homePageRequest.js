@@ -2,7 +2,6 @@ import { displayCount }from './mealsCounter';
 import { setLocalStorage } from './localStorage.js';
 import displayItems from './homePage.js';
 import { getListLikes } from './like.js';
-import displayCounter from './itemsCounter.js';
 
 const getMeals = async () => {
   const response = await fetch('https://www.themealdb.com/api/json/v1/1/categories.php');
