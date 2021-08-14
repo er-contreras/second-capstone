@@ -40,8 +40,8 @@ const openPopUp = () => {
         const popUpContainer = document.getElementById('popUpContainer');
 
         ex.addEventListener('click', () => {
-          container.style.display = 'inherit';
-          header.style.display = 'inherit';
+          container.style.display = 'grid';
+          header.style.display = 'flex';
           popUpContainer.remove();
         });
 
