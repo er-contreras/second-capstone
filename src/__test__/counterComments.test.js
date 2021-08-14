@@ -1,11 +1,7 @@
-/**
- * @jest-environment jsdom
- */
-
 import counterComments from '../counterComments.js';
 
 describe('Test counterComments function', () => {
-  // Arrange
+  
   document.body.innerHTML = `
    <div id="commentsContainer">
    <h2>Comments(6)</h2>
@@ -17,10 +13,8 @@ describe('Test counterComments function', () => {
    <p>2021-08-13 Francis: Recommended!</p>
    </div>`;
 
-  // Act
   const comments = counterComments();
 
-  // Assert
   test('counterComments should return 6', () => {
     expect(comments).toBe(6);
   });

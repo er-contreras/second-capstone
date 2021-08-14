@@ -1,9 +1,7 @@
 const popUpRender = (image, name, id) => {
-  // pop up window container
   const popUpContainer = document.createElement('div');
   popUpContainer.id = 'popUpContainer';
 
-  // pop up image and close button
   const imgNCloseContainer = document.createElement('div');
   imgNCloseContainer.id = 'imgNClose';
 
@@ -16,7 +14,6 @@ const popUpRender = (image, name, id) => {
   btn.className = 'btn';
   btn.innerHTML = 'X';
 
-  // Item description N title
   const itemNDescripContainer = document.createElement('div');
   itemNDescripContainer.id = 'itemNdescriptContainer';
   const itemDescriptionContainer = document.createElement('div');
@@ -27,21 +24,17 @@ const popUpRender = (image, name, id) => {
   title.id = 'titleImg';
   title.textContent = name;
 
-  // Description ------------------------------------------------->
   const itemDescription1 = document.createElement('p');
   const local = JSON.parse(localStorage.getItem('APIData'));
 
   itemDescription1.textContent = `${local[id].strCategoryDescription}`;
 
-  // --------------- Comments ---------------------------------------->
   const commentsContainer = document.createElement('div');
   commentsContainer.id = 'commentsContainer';
   const commentsTitle = document.createElement('h2');
   commentsTitle.textContent = 'Comments';
   const comments = document.createElement('p');
-  // comments.textContent = '03/11/2021 Alex: I\nd love to buy it!';
 
-  // ---------------Add Comments ---------------------------------------->
   const form = document.createElement('form');
   form.id = 'form';
 
@@ -76,32 +69,23 @@ const popUpRender = (image, name, id) => {
   submitBtn.setAttribute('type', 'submit');
   submitBtn.id = 'submit';
 
-  // append to document
   document.body.appendChild(popUpContainer);
-  // Append to popUpContainer
   popUpContainer.appendChild(imgNCloseContainer);
   popUpContainer.appendChild(itemNDescripContainer);
   popUpContainer.appendChild(itemDescriptionContainer);
 
-  // Append to imgNCloseContainer
   imgNCloseContainer.appendChild(img);
   imgNCloseContainer.appendChild(btnContainer);
   btnContainer.appendChild(btn);
-  // Append to itemNDescriptContainer
   itemNDescripContainer.appendChild(titleContainer);
-  // Append to titleContainer
   titleContainer.appendChild(title);
-  // Append to itemDescriptionContainer
   itemDescriptionContainer.appendChild(itemDescription1);
-  // itemDescriptionContainer.appendChild(itemDescription2);
-  // itemDescriptionContainer.appendChild(itemDescription3);
-  // itemDescriptionContainer.appendChild(itemDescription4);
-  // Comments Section
+
   popUpContainer.appendChild(commentsContainer);
   commentsContainer.appendChild(commentsTitle);
   commentsContainer.appendChild(comments);
-  // Form Appends
   popUpContainer.appendChild(form);
+  
   form.appendChild(formTitle);
   form.appendChild(labelName);
   form.appendChild(inputName);
